@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination k'
+define service Zrap_serv_def_so_k {
+  expose zcds_rap_so_k as SalesOrder;
+}

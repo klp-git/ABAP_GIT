@@ -1,0 +1,30 @@
+managed implementation in class zemp_class unique;
+//strict ( 2 );
+
+define behavior for zemp_cds_k alias Employee
+persistent table zemp_table_k
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update ) EmpId;
+
+
+//  validation validateAge on save { field Age; create; }
+
+  mapping for zemp_table_k
+    {
+      EmpId        = emp_id;
+      EmployeeName = emp_name;
+      City         = city;
+      Designation  = designation;
+      Age          = age;
+    }
+
+
+
+
+}

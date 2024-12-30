@@ -1,0 +1,16 @@
+@Metadata.layer: #PARTNER
+annotate view zcds_consumption with
+{
+  @UI.lineItem: [{ position : 10 , importance : #HIGH , label :'User Id' }]
+  UserId;
+
+  @UI.lineItem: [{ position : 20 , importance : #HIGH , label :'User Name' }]
+  Username;
+
+  @UI.lineItem: [{ position : 30 , importance : #HIGH , label :'User Age' }]
+  Userage;
+
+
+
+
+}

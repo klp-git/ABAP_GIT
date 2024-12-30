@@ -1,0 +1,23 @@
+managed; // implementation in class zbp_cds_rap_so_k unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for zcds_rap_so_k //alias orders
+persistent table zrap_so_k
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+//  field ( readonly ) SoId;
+
+  mapping for zrap_so_k {
+  CurrencyCode = currency_code;
+  Customer = customer;
+  GrossAmount = gross_amount;
+  OrderStatus = order_status;
+  SoId = so_id;
+
+}
+}

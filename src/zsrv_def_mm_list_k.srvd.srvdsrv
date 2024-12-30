@@ -1,0 +1,4 @@
+@EndUserText.label: 'se'
+define service Zsrv_def_mm_list_k {
+  expose zdd_ml_k;
+}

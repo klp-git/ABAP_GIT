@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination booking'
+define service Zsrv_def_booking {
+  expose zc_booking;
+}

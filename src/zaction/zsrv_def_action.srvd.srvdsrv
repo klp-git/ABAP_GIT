@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination k'
+define service Zsrv_def_action {
+  expose zc_action;
+}

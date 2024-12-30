@@ -1,0 +1,34 @@
+managed implementation in class zbp_i_cds_action unique;
+//strict ( 2 );
+
+define behavior for zi_cds_action alias Student
+persistent table zdb_student
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( numbering : managed , readonly  ) Id;
+  action (features : instance) setAdmitted result[1] $self;
+
+  determination TotalFees on save {create;update;}
+
+  mapping for zdb_student
+  {
+  Id = id;
+  Firstname = firstname;
+  Lastname = lastname;
+  Age = age;
+  Course = course;
+  CourseDuration = course_duration;
+  Dob = dob;
+  Gender = gender;
+  Status = status;
+  CourseFees = course_fees;
+
+  }
+
+  validation validateAge on save {field Age; create;}
+}

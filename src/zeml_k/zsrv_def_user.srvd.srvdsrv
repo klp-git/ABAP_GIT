@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination k'
+define service Zsrv_def_user {
+  expose zcds_consumption;
+}

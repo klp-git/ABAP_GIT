@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination k'
+define service Zsrv_def_emp_k {
+  expose zemp_cds_k;
+}

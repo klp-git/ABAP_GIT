@@ -1,0 +1,21 @@
+managed implementation in class zbi_user unique;
+//strict ( 2 );
+
+define behavior for zcds_consumption alias user
+persistent table zdb_user
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update ) UserId;
+mapping for zdb_user
+{
+UserId = user_id;
+Username = user_name;
+Userage = user_age;
+}
+
+}

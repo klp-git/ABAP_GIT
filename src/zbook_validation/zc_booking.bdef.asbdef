@@ -1,0 +1,25 @@
+managed implementation in class zbp_c_booking unique;
+strict ( 2 );
+
+define behavior for zc_booking alias bookings
+persistent table zbooking
+lock master
+authorization master ( instance )
+
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update) BookingId;
+
+  mapping for zbooking
+    {
+      bookingid   = BookingId;
+      CustomerName = cust_name;
+      BookingDate  = b_date;
+      Status       = status;
+    }
+
+  validation validateBookingDate on save { field BookingDate; create; }
+}

@@ -1,0 +1,74 @@
+@Metadata.layer: #PARTNER
+annotate entity zc_action with
+{
+  @UI.facet: [{
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'student data report',
+  purpose: #STANDARD
+   }]
+
+  @UI :{ lineItem: [{ position: 1,label : 'Student Id' }],
+  identification: [{ position: 1,label:'Student Id' }]
+   }
+  Id;
+
+
+
+  @UI :{ lineItem: [{ position: 2,label : 'First name' }],
+   identification: [{ position: 2,label:'First Name' }]
+   }
+  Firstname;
+
+
+  @UI :{ lineItem: [{ position: 3,label : 'last name' }],
+  identification: [{ position: 3,label:'last name' }]
+   }
+  Lastname;
+
+
+  @UI :{ lineItem: [{ position: 4,label : 'age' }],
+  identification: [{ position: 4,label:'age' }]
+   }
+  Age;
+
+
+  @UI :{ lineItem: [{ position: 5,label : 'course' }],
+  identification: [{ position: 5,label:'course' }]
+   }
+  Course;
+
+
+  @UI :{ lineItem: [{ position: 6,label : 'Course duration' }],
+  identification: [{ position: 6,label:'Course duration' }]
+   }
+  CourseDuration;
+
+
+  @UI :{ lineItem: [{ position: 7,label : 'status' },
+  { type : #FOR_ACTION, dataAction: 'setAdmitted',label: 'Set Admitted' }],
+  
+  identification: [{ position: 7,label:'Status' },
+  {  type : #FOR_ACTION, dataAction: 'setAdmitted',label: 'Set Admitted' }]
+   }
+  Status;
+
+
+
+  @UI :{ lineItem: [{ position: 8,label : 'gender' }],
+  identification: [{ position: 8,label:'gender' }]
+   }
+  Gender;
+
+
+  @UI :{ lineItem: [{ position: 9,label : 'dob' }],
+  identification: [{ position: 9,label:'dob' }]
+   }
+  Dob;
+  
+  
+   @UI :{ lineItem: [{ position: 10,label : 'Course Fees' }],
+  identification: [{ position: 10,label:'Course Fees' }]
+   }
+  CourseFees;
+
+}
